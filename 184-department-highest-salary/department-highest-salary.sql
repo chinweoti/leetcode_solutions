@@ -1,5 +1,5 @@
 -- Write your PostgreSQL query statement below
-select department, employee,salary--, dense_rank() over (partition by d.name order by salary desc) as rn
+select department, employee,salary
 from    (select d.name as department, e.name as employee,salary, dense_rank() over (partition by d.name order by salary desc) as rn
         from employee e
         join department d
