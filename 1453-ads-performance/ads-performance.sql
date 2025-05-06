@@ -1,4 +1,11 @@
 -- Write your PostgreSQL query statement below
+-- select ad_id, 
+--             round(100.0 * sum(case when action = 'Clicked')/
+--             ifnull(sum(case when action in( 'Clicked', 'Viewed')), 0), 2)
+-- from ads
+-- group by ad_id
+
+
 with base as (
     select ad_id,
     sum(case when action='Clicked' then 1 else 0 end) as total_clicks, 
