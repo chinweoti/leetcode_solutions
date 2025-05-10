@@ -2,7 +2,7 @@ class Solution:
     def makeSmallestPalindrome(self, s: str) -> str:
         l = 0
         r = len(s) -1
-        counter = 0
+
         res = list(s)
 
         while l < r:
@@ -19,9 +19,8 @@ class Solution:
 
 
 
-        #  letters = list(s)
-
-        # for i in range(len(s) // 2):
-        #     letters[i] = letters[~i] = min(letters[i], letters[~i])
-
-        # return ''.join(letters)
+        # result = list(s)
+        # n = len(s)          
+        # for i in range(n // 2):
+        #     result[i] = result[n - i - 1] = min(s[i], s[n - i - 1])
+        # return ''.join(result)
