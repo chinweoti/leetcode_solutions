@@ -1,27 +1,13 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        one = 1
-        two = 1
-
-        for i in range(n-1):
-            temp = one
-            one += two
-            two = temp
-        return one
-
-
-        # def climb(n):
-        #     if n==1: #only one step option is availble
-        #         return 1
-        #     if n ==2: # two options are possible : to take two 1-stpes or to only take one 2-steps
-        #         return 2
-        #     return climb(n-1) + climb(n-2)
-        # return climb(n)
-
-
-
-        # if n <= 3: return n
-        # a = (1, 2)
-        # for i in range(3, n+1):
-        #     a = (a[1], a[0]+a[1])
-        # return a[-1]
+        if n<=2:
+            return n
+        
+        prv1 = 1
+        prv2 = 2
+        x = 0
+        for i in range(2,n):
+            x = prv1 + prv2
+            prv1 = prv2
+            prv2 = x
+        return x
