@@ -1,17 +1,17 @@
 class Solution:
     import math
     def isPowerOfThree(self, n: int) -> bool:
-        if n <= 0:
-            return False
-        return 3**round(math.log(n, 3)) == n 
+        # if n <= 0:
+        #     return False
+        # return 3**round(math.log(n, 3)) == n 
 
 
 
-        # while n>=1:
-        #     if n == 1:    
-        #         return True
-        #     n = n/3
-        # return False
+        while n>=1:
+            if n == 1:    
+                return True
+            n = n/3
+        return False
 
 
 
