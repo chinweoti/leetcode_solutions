@@ -13,9 +13,22 @@ class Solution:
                 counter = 0
             else:
                 counter += 1
-                print(str(counter))
                 l += 1
                 r += 1
             max_counter = max(counter, max_counter) 
-            print(max_counter)
         return max_counter + 1
+
+
+
+        # curr = s[0]
+        # temp = 1
+        # res = 1
+
+        # for char in s[1:]:
+        #     if char == curr:
+        #         temp += 1
+        #         res = max(temp, res)
+        #     else:
+        #         curr = char
+        #         temp = 1
+        # return res
