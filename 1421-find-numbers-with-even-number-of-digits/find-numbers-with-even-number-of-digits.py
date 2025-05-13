@@ -7,7 +7,6 @@ class Solution(object):
         counter = 0
 
         for num in nums:
-            n = len(str(num))
-            if n % 2 == 0:
+            if len(str(num))% 2 == 0:
                 counter += 1
         return counter
