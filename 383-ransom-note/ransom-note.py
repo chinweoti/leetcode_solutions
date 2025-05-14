@@ -2,21 +2,25 @@ class Solution:
     from collections import defaultdict
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
 
-        mMap = Counter(magazine)
-        # print(mMap)
-        rMap = Counter(ransomNote)
-        # print(rMap)
+        # mMap = Counter(magazine)
+        # # print(mMap)
+        # rMap = Counter(ransomNote)
+        # # print(rMap)
 
-        for char in rMap:
-            if char not in mMap:
-                return False
-            if rMap[char] > mMap[char]:
-                return False
+        # for char in rMap:
+        #     if char not in mMap:
+        #         return False
+        #     if rMap[char] > mMap[char]:
+        #         return False
         
+        # return True
+
+
+        # ransomNote_set = set(ransomNote)
+        for l in ransomNote:
+            if ransomNote.count(l) > magazine.count(l):
+                return False
         return True
-
-
-
 
 
         # note = defaultdict(int)
