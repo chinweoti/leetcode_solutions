@@ -8,11 +8,9 @@ class Solution:
 
         for e in nums1:
             h_map[e] += 1
-            print(h_map)
 
         for e in nums2:
             if h_map[e] > 0:
-                print(e)
                 result.append(e)
                 h_map[e] -= 1
         return result
