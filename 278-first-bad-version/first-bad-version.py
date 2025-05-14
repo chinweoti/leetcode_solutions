@@ -6,11 +6,13 @@ class Solution:
         l = 1
         r = n
 
-        while l <= n:
+        while l <= r:
             mid = (l+r)//2
-            if not isBadVersion(mid):
-                l = mid + 1
-            elif isBadVersion(mid -1):
-                 r = mid - 1
+            if isBadVersion(mid):
+                r = mid - 1
             else:
-                return mid
+                l = mid + 1
+
+        return l
+
+
