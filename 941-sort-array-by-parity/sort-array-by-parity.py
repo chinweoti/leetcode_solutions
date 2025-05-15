@@ -1,18 +1,17 @@
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
         l = 0
-        # nums.sort()
+        
 
         for i, n in enumerate(nums):
             if nums[i]% 2 == 0:
-                temp = nums[l]
-                nums[l] = nums[i]
-                nums[i] = temp
+                nums[l], nums[i] = nums[i], nums[l]
                 l += 1
         return nums
         # if you dont want a temp holder, exchange both in one line ie nums[l], nums[i] = nums[i], nums[l]
-        # time complexity = O(nlog n)
-        # space complexity = O(log n)
+        # time complexity = O(n)
+        # space complexity = O(1)
+        # sort operation is logarithmic
 
 
         # l, r = 0, len(nums) - 1
