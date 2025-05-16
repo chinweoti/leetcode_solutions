@@ -15,10 +15,9 @@ class Solution:
                 if b10 and b5:
                     b10 -= 1
                     b5 -= 1
-                elif b5 >= 3:
+                elif b5 >2:
                     b5 -= 3
                 else:
                     return False
-                    print(e, b5, b10)
         return True
 
