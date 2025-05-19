@@ -1,40 +1,58 @@
 class Solution:
     def addToArrayForm(self, num: List[int], k: int) -> List[int]:
+        sys.set_int_max_str_digits(1000000000)
+        n = ''.join(str(x) for x in num)
+        print(n)
+
+        result = int(n) + int(k)
+        print(result)
+
+        result = (str(result))
+        print(result)
+        result = (list(result))
         res = []
-        carry = k
-        i = len(num) - 1
+        for e in result:
+            res.append(int(e))
+        return res
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # res = []
+        # carry = k
+        # print(k)
+        # i = len(num) - 1
 
-        while i >= 0 or carry > 0:
-            if i >= 0:
-                carry += num[i]
-            res.append(carry % 10)
-            carry //= 10
-            i -= 1
+        # while i >= 0 or carry > 0:
+        #     if i >= 0:
+        #         carry += num[i]
+        #     res.append(carry % 10)
+        #     carry //= 10
+        #     i -= 1
 
-        return res[::-1]
+        # return res[::-1]
+
+        
 
         # carry = 0
         # num.reverse()
         # l = 0
         # r = 0
-        # k = str(k)
-        # k = k[::-1]
-        # # print(k)
+        # k = str(k)[::-1]
         # while l < len(str(k)) and r < len(str(k)):
-        #     total = (num[l] + int(k[r]) + carry)
-        #     # print(total, carry, int(k[r]))
-        #     if total > 9:
-        #         carry += total // 10
-        #         # print(carry)
-        #         rem = total % 10
-        #         print(rem)
+        #     num[l] = (num[l] + int(k[r]) + carry)
+        #     if num[l] >=10:
+        #         carry += num[l]// 10
+        #         rem = num[l] % 10
         #         num[l] = rem
         #         l += 1 
         #         r += 1
-        #     elif total <= 9:
-        #         num[l] += total
-        #         # print(num[l], total)
+        #     else:
         #         l += 1 
         #         r += 1
-        #         # print(num)
         # return num[::-1]
