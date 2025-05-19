@@ -9,6 +9,6 @@ class Solution:
         max_freq = max(freq.values())
     
         m_freq = [k for k, v in freq.items() if v == max_freq]
-        print(m_freq)
+        # print(m_freq)
         return min(m_freq)
         
