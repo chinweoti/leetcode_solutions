@@ -2,14 +2,9 @@ class Solution:
     def addToArrayForm(self, num: List[int], k: int) -> List[int]:
         sys.set_int_max_str_digits(100000)
         n = ''.join(str(x) for x in num)
-        print(n)
-
-        result = int(n) + int(k)
-        print(result)
-
+        result = int(n) + (k)
         result = (str(result))
-        print(result)
-        result = (list(result))
+        
         res = []
         for e in result:
             res.append(int(e))
