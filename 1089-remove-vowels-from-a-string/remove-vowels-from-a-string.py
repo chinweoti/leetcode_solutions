@@ -3,7 +3,6 @@ class Solution:
         
         vowels = 'AEIOUaeiou'
         
-        s = list(s)
         res = ''
 
         for e in s:
